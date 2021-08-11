@@ -1,0 +1,458 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{5C4264BE-D38C-32EC-93DC-E1AC5EB7D314}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>darknet</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\test1\Yolo-Fastest-master\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">darknet.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">darknet</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\test1\Yolo-Fastest-master\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">darknet.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">darknet</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\test1\Yolo-Fastest-master\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">darknet.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">darknet</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\test1\Yolo-Fastest-master\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">darknet.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">darknet</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\test1\Yolo-Fastest-master\include;D:\test1\Yolo-Fastest-master\src;D:\test1\Yolo-Fastest-master\3rdparty\stb\include;D:\test1\Yolo-Fastest-master\3rdparty\pthreads\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4013;4018;4028;4047;4068;4090;4101;4113;4133;4190;4244;4267;4305;4477;4996;4819</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <OpenMPSupport>true</OpenMPSupport>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SuppressStartupBanner></SuppressStartupBanner>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;USE_CMAKE_LIBS;_CRT_RAND_S;NOMINMAX;_USE_MATH_DEFINES;_TIMESPEC_DEFINED;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;USE_CMAKE_LIBS;_CRT_RAND_S;NOMINMAX;_USE_MATH_DEFINES;_TIMESPEC_DEFINED;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\test1\Yolo-Fastest-master\include;D:\test1\Yolo-Fastest-master\src;D:\test1\Yolo-Fastest-master\3rdparty\stb\include;D:\test1\Yolo-Fastest-master\3rdparty\pthreads\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\test1\Yolo-Fastest-master\include;D:\test1\Yolo-Fastest-master\src;D:\test1\Yolo-Fastest-master\3rdparty\stb\include;D:\test1\Yolo-Fastest-master\3rdparty\pthreads\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>3rdparty\pthreads\lib\pthreadVC2.lib;wsock32.lib;ws2_32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/test1/Yolo-Fastest-master/Debug/darknet.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/test1/Yolo-Fastest-master/Debug/darknet.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\test1\Yolo-Fastest-master\include;D:\test1\Yolo-Fastest-master\src;D:\test1\Yolo-Fastest-master\3rdparty\stb\include;D:\test1\Yolo-Fastest-master\3rdparty\pthreads\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DisableSpecificWarnings>4013;4018;4028;4047;4068;4090;4101;4113;4133;4190;4244;4267;4305;4477;4996;4819</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <OpenMPSupport>true</OpenMPSupport>
+      <Optimization>Full</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SuppressStartupBanner></SuppressStartupBanner>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;USE_CMAKE_LIBS;_CRT_RAND_S;NOMINMAX;_USE_MATH_DEFINES;_TIMESPEC_DEFINED;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;USE_CMAKE_LIBS;_CRT_RAND_S;NOMINMAX;_USE_MATH_DEFINES;_TIMESPEC_DEFINED;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\test1\Yolo-Fastest-master\include;D:\test1\Yolo-Fastest-master\src;D:\test1\Yolo-Fastest-master\3rdparty\stb\include;D:\test1\Yolo-Fastest-master\3rdparty\pthreads\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\test1\Yolo-Fastest-master\include;D:\test1\Yolo-Fastest-master\src;D:\test1\Yolo-Fastest-master\3rdparty\stb\include;D:\test1\Yolo-Fastest-master\3rdparty\pthreads\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>3rdparty\pthreads\lib\pthreadVC2.lib;wsock32.lib;ws2_32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/test1/Yolo-Fastest-master/Release/darknet.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/test1/Yolo-Fastest-master/Release/darknet.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\test1\Yolo-Fastest-master\include;D:\test1\Yolo-Fastest-master\src;D:\test1\Yolo-Fastest-master\3rdparty\stb\include;D:\test1\Yolo-Fastest-master\3rdparty\pthreads\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DisableSpecificWarnings>4013;4018;4028;4047;4068;4090;4101;4113;4133;4190;4244;4267;4305;4477;4996;4819</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <OpenMPSupport>true</OpenMPSupport>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SuppressStartupBanner></SuppressStartupBanner>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;USE_CMAKE_LIBS;_CRT_RAND_S;NOMINMAX;_USE_MATH_DEFINES;_TIMESPEC_DEFINED;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;USE_CMAKE_LIBS;_CRT_RAND_S;NOMINMAX;_USE_MATH_DEFINES;_TIMESPEC_DEFINED;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\test1\Yolo-Fastest-master\include;D:\test1\Yolo-Fastest-master\src;D:\test1\Yolo-Fastest-master\3rdparty\stb\include;D:\test1\Yolo-Fastest-master\3rdparty\pthreads\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\test1\Yolo-Fastest-master\include;D:\test1\Yolo-Fastest-master\src;D:\test1\Yolo-Fastest-master\3rdparty\stb\include;D:\test1\Yolo-Fastest-master\3rdparty\pthreads\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>3rdparty\pthreads\lib\pthreadVC2.lib;wsock32.lib;ws2_32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/test1/Yolo-Fastest-master/MinSizeRel/darknet.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/test1/Yolo-Fastest-master/MinSizeRel/darknet.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\test1\Yolo-Fastest-master\include;D:\test1\Yolo-Fastest-master\src;D:\test1\Yolo-Fastest-master\3rdparty\stb\include;D:\test1\Yolo-Fastest-master\3rdparty\pthreads\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4013;4018;4028;4047;4068;4090;4101;4113;4133;4190;4244;4267;4305;4477;4996;4819</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <OpenMPSupport>true</OpenMPSupport>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SuppressStartupBanner></SuppressStartupBanner>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;USE_CMAKE_LIBS;_CRT_RAND_S;NOMINMAX;_USE_MATH_DEFINES;_TIMESPEC_DEFINED;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;USE_CMAKE_LIBS;_CRT_RAND_S;NOMINMAX;_USE_MATH_DEFINES;_TIMESPEC_DEFINED;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\test1\Yolo-Fastest-master\include;D:\test1\Yolo-Fastest-master\src;D:\test1\Yolo-Fastest-master\3rdparty\stb\include;D:\test1\Yolo-Fastest-master\3rdparty\pthreads\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\test1\Yolo-Fastest-master\include;D:\test1\Yolo-Fastest-master\src;D:\test1\Yolo-Fastest-master\3rdparty\stb\include;D:\test1\Yolo-Fastest-master\3rdparty\pthreads\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>3rdparty\pthreads\lib\pthreadVC2.lib;wsock32.lib;ws2_32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/test1/Yolo-Fastest-master/RelWithDebInfo/darknet.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/test1/Yolo-Fastest-master/RelWithDebInfo/darknet.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\test1\Yolo-Fastest-master\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/test1/Yolo-Fastest-master/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+D:\Cmake\bin\cmake.exe -SD:/test1/Yolo-Fastest-master -BD:/test1/Yolo-Fastest-master --check-stamp-file D:/test1/Yolo-Fastest-master/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Cmake\share\cmake-3.21\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;D:\Cmake\share\cmake-3.21\Modules\CMakeCInformation.cmake;D:\Cmake\share\cmake-3.21\Modules\CMakeCXXInformation.cmake;D:\Cmake\share\cmake-3.21\Modules\CMakeCommonLanguageInclude.cmake;D:\Cmake\share\cmake-3.21\Modules\CMakeDependentOption.cmake;D:\Cmake\share\cmake-3.21\Modules\CMakeGenericSystem.cmake;D:\Cmake\share\cmake-3.21\Modules\CMakeInitializeConfigs.cmake;D:\Cmake\share\cmake-3.21\Modules\CMakeLanguageInformation.cmake;D:\Cmake\share\cmake-3.21\Modules\CMakePackageConfigHelpers.cmake;D:\Cmake\share\cmake-3.21\Modules\CMakeParseImplicitLinkInfo.cmake;D:\Cmake\share\cmake-3.21\Modules\CMakeRCInformation.cmake;D:\Cmake\share\cmake-3.21\Modules\CMakeSystemSpecificInformation.cmake;D:\Cmake\share\cmake-3.21\Modules\CMakeSystemSpecificInitialize.cmake;D:\Cmake\share\cmake-3.21\Modules\CheckCSourceCompiles.cmake;D:\Cmake\share\cmake-3.21\Modules\CheckIncludeFile.c.in;D:\Cmake\share\cmake-3.21\Modules\CheckIncludeFile.cmake;D:\Cmake\share\cmake-3.21\Modules\CheckLibraryExists.cmake;D:\Cmake\share\cmake-3.21\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\Cmake\share\cmake-3.21\Modules\Compiler\MSVC-C.cmake;D:\Cmake\share\cmake-3.21\Modules\Compiler\MSVC-CXX.cmake;D:\Cmake\share\cmake-3.21\Modules\FindOpenMP.cmake;D:\Cmake\share\cmake-3.21\Modules\FindPackageHandleStandardArgs.cmake;D:\Cmake\share\cmake-3.21\Modules\FindPackageMessage.cmake;D:\Cmake\share\cmake-3.21\Modules\FindThreads.cmake;D:\Cmake\share\cmake-3.21\Modules\Internal\CheckSourceCompiles.cmake;D:\Cmake\share\cmake-3.21\Modules\Platform\Windows-MSVC-C.cmake;D:\Cmake\share\cmake-3.21\Modules\Platform\Windows-MSVC-CXX.cmake;D:\Cmake\share\cmake-3.21\Modules\Platform\Windows-MSVC.cmake;D:\Cmake\share\cmake-3.21\Modules\Platform\Windows.cmake;D:\Cmake\share\cmake-3.21\Modules\Platform\WindowsPaths.cmake;D:\Cmake\share\cmake-3.21\Modules\SelectLibraryConfigurations.cmake;D:\Cmake\share\cmake-3.21\Modules\WriteBasicConfigVersionFile.cmake;D:\test1\Yolo-Fastest-master\CMakeFiles\3.21.1\CMakeCCompiler.cmake;D:\test1\Yolo-Fastest-master\CMakeFiles\3.21.1\CMakeCXXCompiler.cmake;D:\test1\Yolo-Fastest-master\CMakeFiles\3.21.1\CMakeRCCompiler.cmake;D:\test1\Yolo-Fastest-master\CMakeFiles\3.21.1\CMakeSystem.cmake;D:\test1\Yolo-Fastest-master\CMakeFiles\FindOpenMP\OpenMPCheckVersion.c;D:\test1\Yolo-Fastest-master\CMakeFiles\FindOpenMP\OpenMPCheckVersion.cpp;D:\test1\Yolo-Fastest-master\CMakeFiles\FindOpenMP\OpenMPTryFlag.c;D:\test1\Yolo-Fastest-master\CMakeFiles\FindOpenMP\OpenMPTryFlag.cpp;D:\test1\Yolo-Fastest-master\DarknetConfig.cmake.in;D:\test1\Yolo-Fastest-master\cmake\Modules\FindPThreads_windows.cmake;D:\test1\Yolo-Fastest-master\cmake\Modules\FindStb.cmake;D:\test1\Yolo-Fastest-master\src\version.h.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\test1\Yolo-Fastest-master\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/test1/Yolo-Fastest-master/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+D:\Cmake\bin\cmake.exe -SD:/test1/Yolo-Fastest-master -BD:/test1/Yolo-Fastest-master --check-stamp-file D:/test1/Yolo-Fastest-master/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Cmake\share\cmake-3.21\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;D:\Cmake\share\cmake-3.21\Modules\CMakeCInformation.cmake;D:\Cmake\share\cmake-3.21\Modules\CMakeCXXInformation.cmake;D:\Cmake\share\cmake-3.21\Modules\CMakeCommonLanguageInclude.cmake;D:\Cmake\share\cmake-3.21\Modules\CMakeDependentOption.cmake;D:\Cmake\share\cmake-3.21\Modules\CMakeGenericSystem.cmake;D:\Cmake\share\cmake-3.21\Modules\CMakeInitializeConfigs.cmake;D:\Cmake\share\cmake-3.21\Modules\CMakeLanguageInformation.cmake;D:\Cmake\share\cmake-3.21\Modules\CMakePackageConfigHelpers.cmake;D:\Cmake\share\cmake-3.21\Modules\CMakeParseImplicitLinkInfo.cmake;D:\Cmake\share\cmake-3.21\Modules\CMakeRCInformation.cmake;D:\Cmake\share\cmake-3.21\Modules\CMakeSystemSpecificInformation.cmake;D:\Cmake\share\cmake-3.21\Modules\CMakeSystemSpecificInitialize.cmake;D:\Cmake\share\cmake-3.21\Modules\CheckCSourceCompiles.cmake;D:\Cmake\share\cmake-3.21\Modules\CheckIncludeFile.c.in;D:\Cmake\share\cmake-3.21\Modules\CheckIncludeFile.cmake;D:\Cmake\share\cmake-3.21\Modules\CheckLibraryExists.cmake;D:\Cmake\share\cmake-3.21\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\Cmake\share\cmake-3.21\Modules\Compiler\MSVC-C.cmake;D:\Cmake\share\cmake-3.21\Modules\Compiler\MSVC-CXX.cmake;D:\Cmake\share\cmake-3.21\Modules\FindOpenMP.cmake;D:\Cmake\share\cmake-3.21\Modules\FindPackageHandleStandardArgs.cmake;D:\Cmake\share\cmake-3.21\Modules\FindPackageMessage.cmake;D:\Cmake\share\cmake-3.21\Modules\FindThreads.cmake;D:\Cmake\share\cmake-3.21\Modules\Internal\CheckSourceCompiles.cmake;D:\Cmake\share\cmake-3.21\Modules\Platform\Windows-MSVC-C.cmake;D:\Cmake\share\cmake-3.21\Modules\Platform\Windows-MSVC-CXX.cmake;D:\Cmake\share\cmake-3.21\Modules\Platform\Windows-MSVC.cmake;D:\Cmake\share\cmake-3.21\Modules\Platform\Windows.cmake;D:\Cmake\share\cmake-3.21\Modules\Platform\WindowsPaths.cmake;D:\Cmake\share\cmake-3.21\Modules\SelectLibraryConfigurations.cmake;D:\Cmake\share\cmake-3.21\Modules\WriteBasicConfigVersionFile.cmake;D:\test1\Yolo-Fastest-master\CMakeFiles\3.21.1\CMakeCCompiler.cmake;D:\test1\Yolo-Fastest-master\CMakeFiles\3.21.1\CMakeCXXCompiler.cmake;D:\test1\Yolo-Fastest-master\CMakeFiles\3.21.1\CMakeRCCompiler.cmake;D:\test1\Yolo-Fastest-master\CMakeFiles\3.21.1\CMakeSystem.cmake;D:\test1\Yolo-Fastest-master\CMakeFiles\FindOpenMP\OpenMPCheckVersion.c;D:\test1\Yolo-Fastest-master\CMakeFiles\FindOpenMP\OpenMPCheckVersion.cpp;D:\test1\Yolo-Fastest-master\CMakeFiles\FindOpenMP\OpenMPTryFlag.c;D:\test1\Yolo-Fastest-master\CMakeFiles\FindOpenMP\OpenMPTryFlag.cpp;D:\test1\Yolo-Fastest-master\DarknetConfig.cmake.in;D:\test1\Yolo-Fastest-master\cmake\Modules\FindPThreads_windows.cmake;D:\test1\Yolo-Fastest-master\cmake\Modules\FindStb.cmake;D:\test1\Yolo-Fastest-master\src\version.h.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\test1\Yolo-Fastest-master\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule D:/test1/Yolo-Fastest-master/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+D:\Cmake\bin\cmake.exe -SD:/test1/Yolo-Fastest-master -BD:/test1/Yolo-Fastest-master --check-stamp-file D:/test1/Yolo-Fastest-master/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\Cmake\share\cmake-3.21\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;D:\Cmake\share\cmake-3.21\Modules\CMakeCInformation.cmake;D:\Cmake\share\cmake-3.21\Modules\CMakeCXXInformation.cmake;D:\Cmake\share\cmake-3.21\Modules\CMakeCommonLanguageInclude.cmake;D:\Cmake\share\cmake-3.21\Modules\CMakeDependentOption.cmake;D:\Cmake\share\cmake-3.21\Modules\CMakeGenericSystem.cmake;D:\Cmake\share\cmake-3.21\Modules\CMakeInitializeConfigs.cmake;D:\Cmake\share\cmake-3.21\Modules\CMakeLanguageInformation.cmake;D:\Cmake\share\cmake-3.21\Modules\CMakePackageConfigHelpers.cmake;D:\Cmake\share\cmake-3.21\Modules\CMakeParseImplicitLinkInfo.cmake;D:\Cmake\share\cmake-3.21\Modules\CMakeRCInformation.cmake;D:\Cmake\share\cmake-3.21\Modules\CMakeSystemSpecificInformation.cmake;D:\Cmake\share\cmake-3.21\Modules\CMakeSystemSpecificInitialize.cmake;D:\Cmake\share\cmake-3.21\Modules\CheckCSourceCompiles.cmake;D:\Cmake\share\cmake-3.21\Modules\CheckIncludeFile.c.in;D:\Cmake\share\cmake-3.21\Modules\CheckIncludeFile.cmake;D:\Cmake\share\cmake-3.21\Modules\CheckLibraryExists.cmake;D:\Cmake\share\cmake-3.21\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\Cmake\share\cmake-3.21\Modules\Compiler\MSVC-C.cmake;D:\Cmake\share\cmake-3.21\Modules\Compiler\MSVC-CXX.cmake;D:\Cmake\share\cmake-3.21\Modules\FindOpenMP.cmake;D:\Cmake\share\cmake-3.21\Modules\FindPackageHandleStandardArgs.cmake;D:\Cmake\share\cmake-3.21\Modules\FindPackageMessage.cmake;D:\Cmake\share\cmake-3.21\Modules\FindThreads.cmake;D:\Cmake\share\cmake-3.21\Modules\Internal\CheckSourceCompiles.cmake;D:\Cmake\share\cmake-3.21\Modules\Platform\Windows-MSVC-C.cmake;D:\Cmake\share\cmake-3.21\Modules\Platform\Windows-MSVC-CXX.cmake;D:\Cmake\share\cmake-3.21\Modules\Platform\Windows-MSVC.cmake;D:\Cmake\share\cmake-3.21\Modules\Platform\Windows.cmake;D:\Cmake\share\cmake-3.21\Modules\Platform\WindowsPaths.cmake;D:\Cmake\share\cmake-3.21\Modules\SelectLibraryConfigurations.cmake;D:\Cmake\share\cmake-3.21\Modules\WriteBasicConfigVersionFile.cmake;D:\test1\Yolo-Fastest-master\CMakeFiles\3.21.1\CMakeCCompiler.cmake;D:\test1\Yolo-Fastest-master\CMakeFiles\3.21.1\CMakeCXXCompiler.cmake;D:\test1\Yolo-Fastest-master\CMakeFiles\3.21.1\CMakeRCCompiler.cmake;D:\test1\Yolo-Fastest-master\CMakeFiles\3.21.1\CMakeSystem.cmake;D:\test1\Yolo-Fastest-master\CMakeFiles\FindOpenMP\OpenMPCheckVersion.c;D:\test1\Yolo-Fastest-master\CMakeFiles\FindOpenMP\OpenMPCheckVersion.cpp;D:\test1\Yolo-Fastest-master\CMakeFiles\FindOpenMP\OpenMPTryFlag.c;D:\test1\Yolo-Fastest-master\CMakeFiles\FindOpenMP\OpenMPTryFlag.cpp;D:\test1\Yolo-Fastest-master\DarknetConfig.cmake.in;D:\test1\Yolo-Fastest-master\cmake\Modules\FindPThreads_windows.cmake;D:\test1\Yolo-Fastest-master\cmake\Modules\FindStb.cmake;D:\test1\Yolo-Fastest-master\src\version.h.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\test1\Yolo-Fastest-master\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule D:/test1/Yolo-Fastest-master/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+D:\Cmake\bin\cmake.exe -SD:/test1/Yolo-Fastest-master -BD:/test1/Yolo-Fastest-master --check-stamp-file D:/test1/Yolo-Fastest-master/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\Cmake\share\cmake-3.21\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;D:\Cmake\share\cmake-3.21\Modules\CMakeCInformation.cmake;D:\Cmake\share\cmake-3.21\Modules\CMakeCXXInformation.cmake;D:\Cmake\share\cmake-3.21\Modules\CMakeCommonLanguageInclude.cmake;D:\Cmake\share\cmake-3.21\Modules\CMakeDependentOption.cmake;D:\Cmake\share\cmake-3.21\Modules\CMakeGenericSystem.cmake;D:\Cmake\share\cmake-3.21\Modules\CMakeInitializeConfigs.cmake;D:\Cmake\share\cmake-3.21\Modules\CMakeLanguageInformation.cmake;D:\Cmake\share\cmake-3.21\Modules\CMakePackageConfigHelpers.cmake;D:\Cmake\share\cmake-3.21\Modules\CMakeParseImplicitLinkInfo.cmake;D:\Cmake\share\cmake-3.21\Modules\CMakeRCInformation.cmake;D:\Cmake\share\cmake-3.21\Modules\CMakeSystemSpecificInformation.cmake;D:\Cmake\share\cmake-3.21\Modules\CMakeSystemSpecificInitialize.cmake;D:\Cmake\share\cmake-3.21\Modules\CheckCSourceCompiles.cmake;D:\Cmake\share\cmake-3.21\Modules\CheckIncludeFile.c.in;D:\Cmake\share\cmake-3.21\Modules\CheckIncludeFile.cmake;D:\Cmake\share\cmake-3.21\Modules\CheckLibraryExists.cmake;D:\Cmake\share\cmake-3.21\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\Cmake\share\cmake-3.21\Modules\Compiler\MSVC-C.cmake;D:\Cmake\share\cmake-3.21\Modules\Compiler\MSVC-CXX.cmake;D:\Cmake\share\cmake-3.21\Modules\FindOpenMP.cmake;D:\Cmake\share\cmake-3.21\Modules\FindPackageHandleStandardArgs.cmake;D:\Cmake\share\cmake-3.21\Modules\FindPackageMessage.cmake;D:\Cmake\share\cmake-3.21\Modules\FindThreads.cmake;D:\Cmake\share\cmake-3.21\Modules\Internal\CheckSourceCompiles.cmake;D:\Cmake\share\cmake-3.21\Modules\Platform\Windows-MSVC-C.cmake;D:\Cmake\share\cmake-3.21\Modules\Platform\Windows-MSVC-CXX.cmake;D:\Cmake\share\cmake-3.21\Modules\Platform\Windows-MSVC.cmake;D:\Cmake\share\cmake-3.21\Modules\Platform\Windows.cmake;D:\Cmake\share\cmake-3.21\Modules\Platform\WindowsPaths.cmake;D:\Cmake\share\cmake-3.21\Modules\SelectLibraryConfigurations.cmake;D:\Cmake\share\cmake-3.21\Modules\WriteBasicConfigVersionFile.cmake;D:\test1\Yolo-Fastest-master\CMakeFiles\3.21.1\CMakeCCompiler.cmake;D:\test1\Yolo-Fastest-master\CMakeFiles\3.21.1\CMakeCXXCompiler.cmake;D:\test1\Yolo-Fastest-master\CMakeFiles\3.21.1\CMakeRCCompiler.cmake;D:\test1\Yolo-Fastest-master\CMakeFiles\3.21.1\CMakeSystem.cmake;D:\test1\Yolo-Fastest-master\CMakeFiles\FindOpenMP\OpenMPCheckVersion.c;D:\test1\Yolo-Fastest-master\CMakeFiles\FindOpenMP\OpenMPCheckVersion.cpp;D:\test1\Yolo-Fastest-master\CMakeFiles\FindOpenMP\OpenMPTryFlag.c;D:\test1\Yolo-Fastest-master\CMakeFiles\FindOpenMP\OpenMPTryFlag.cpp;D:\test1\Yolo-Fastest-master\DarknetConfig.cmake.in;D:\test1\Yolo-Fastest-master\cmake\Modules\FindPThreads_windows.cmake;D:\test1\Yolo-Fastest-master\cmake\Modules\FindStb.cmake;D:\test1\Yolo-Fastest-master\src\version.h.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\test1\Yolo-Fastest-master\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="D:\test1\Yolo-Fastest-master\src\darknet.c" />
+    <ClCompile Include="D:\test1\Yolo-Fastest-master\src\activation_layer.c" />
+    <ClCompile Include="D:\test1\Yolo-Fastest-master\src\activations.c" />
+    <ClCompile Include="D:\test1\Yolo-Fastest-master\src\art.c" />
+    <ClCompile Include="D:\test1\Yolo-Fastest-master\src\avgpool_layer.c" />
+    <ClCompile Include="D:\test1\Yolo-Fastest-master\src\batchnorm_layer.c" />
+    <ClCompile Include="D:\test1\Yolo-Fastest-master\src\blas.c" />
+    <ClCompile Include="D:\test1\Yolo-Fastest-master\src\box.c" />
+    <ClCompile Include="D:\test1\Yolo-Fastest-master\src\captcha.c" />
+    <ClCompile Include="D:\test1\Yolo-Fastest-master\src\cifar.c" />
+    <ClCompile Include="D:\test1\Yolo-Fastest-master\src\classifier.c" />
+    <ClCompile Include="D:\test1\Yolo-Fastest-master\src\coco.c" />
+    <ClCompile Include="D:\test1\Yolo-Fastest-master\src\col2im.c" />
+    <ClCompile Include="D:\test1\Yolo-Fastest-master\src\compare.c" />
+    <ClCompile Include="D:\test1\Yolo-Fastest-master\src\connected_layer.c" />
+    <ClCompile Include="D:\test1\Yolo-Fastest-master\src\conv_lstm_layer.c" />
+    <ClCompile Include="D:\test1\Yolo-Fastest-master\src\convolutional_layer.c" />
+    <ClCompile Include="D:\test1\Yolo-Fastest-master\src\cost_layer.c" />
+    <ClCompile Include="D:\test1\Yolo-Fastest-master\src\cpu_gemm.c" />
+    <ClCompile Include="D:\test1\Yolo-Fastest-master\src\crnn_layer.c" />
+    <ClCompile Include="D:\test1\Yolo-Fastest-master\src\crop_layer.c" />
+    <ClCompile Include="D:\test1\Yolo-Fastest-master\src\dark_cuda.c" />
+    <ClCompile Include="D:\test1\Yolo-Fastest-master\src\data.c" />
+    <ClCompile Include="D:\test1\Yolo-Fastest-master\src\deconvolutional_layer.c" />
+    <ClCompile Include="D:\test1\Yolo-Fastest-master\src\demo.c" />
+    <ClCompile Include="D:\test1\Yolo-Fastest-master\src\detection_layer.c" />
+    <ClCompile Include="D:\test1\Yolo-Fastest-master\src\detector.c" />
+    <ClCompile Include="D:\test1\Yolo-Fastest-master\src\dice.c" />
+    <ClCompile Include="D:\test1\Yolo-Fastest-master\src\dropout_layer.c" />
+    <ClCompile Include="D:\test1\Yolo-Fastest-master\src\gaussian_yolo_layer.c" />
+    <ClCompile Include="D:\test1\Yolo-Fastest-master\src\gemm.c" />
+    <ClCompile Include="D:\test1\Yolo-Fastest-master\src\getopt.c" />
+    <ClCompile Include="D:\test1\Yolo-Fastest-master\src\gettimeofday.c" />
+    <ClCompile Include="D:\test1\Yolo-Fastest-master\src\go.c" />
+    <ClCompile Include="D:\test1\Yolo-Fastest-master\src\gru_layer.c" />
+    <ClCompile Include="D:\test1\Yolo-Fastest-master\src\im2col.c" />
+    <ClCompile Include="D:\test1\Yolo-Fastest-master\src\image.c" />
+    <ClCompile Include="D:\test1\Yolo-Fastest-master\src\layer.c" />
+    <ClCompile Include="D:\test1\Yolo-Fastest-master\src\list.c" />
+    <ClCompile Include="D:\test1\Yolo-Fastest-master\src\local_layer.c" />
+    <ClCompile Include="D:\test1\Yolo-Fastest-master\src\lstm_layer.c" />
+    <ClCompile Include="D:\test1\Yolo-Fastest-master\src\matrix.c" />
+    <ClCompile Include="D:\test1\Yolo-Fastest-master\src\maxpool_layer.c" />
+    <ClCompile Include="D:\test1\Yolo-Fastest-master\src\network.c" />
+    <ClCompile Include="D:\test1\Yolo-Fastest-master\src\nightmare.c" />
+    <ClCompile Include="D:\test1\Yolo-Fastest-master\src\normalization_layer.c" />
+    <ClCompile Include="D:\test1\Yolo-Fastest-master\src\option_list.c" />
+    <ClCompile Include="D:\test1\Yolo-Fastest-master\src\parser.c" />
+    <ClCompile Include="D:\test1\Yolo-Fastest-master\src\region_layer.c" />
+    <ClCompile Include="D:\test1\Yolo-Fastest-master\src\reorg_layer.c" />
+    <ClCompile Include="D:\test1\Yolo-Fastest-master\src\reorg_old_layer.c" />
+    <ClCompile Include="D:\test1\Yolo-Fastest-master\src\rnn.c" />
+    <ClCompile Include="D:\test1\Yolo-Fastest-master\src\rnn_layer.c" />
+    <ClCompile Include="D:\test1\Yolo-Fastest-master\src\rnn_vid.c" />
+    <ClCompile Include="D:\test1\Yolo-Fastest-master\src\route_layer.c" />
+    <ClCompile Include="D:\test1\Yolo-Fastest-master\src\sam_layer.c" />
+    <ClCompile Include="D:\test1\Yolo-Fastest-master\src\scale_channels_layer.c" />
+    <ClCompile Include="D:\test1\Yolo-Fastest-master\src\shortcut_layer.c" />
+    <ClCompile Include="D:\test1\Yolo-Fastest-master\src\softmax_layer.c" />
+    <ClCompile Include="D:\test1\Yolo-Fastest-master\src\super.c" />
+    <ClCompile Include="D:\test1\Yolo-Fastest-master\src\swag.c" />
+    <ClCompile Include="D:\test1\Yolo-Fastest-master\src\tag.c" />
+    <ClCompile Include="D:\test1\Yolo-Fastest-master\src\tree.c" />
+    <ClCompile Include="D:\test1\Yolo-Fastest-master\src\upsample_layer.c" />
+    <ClCompile Include="D:\test1\Yolo-Fastest-master\src\utils.c" />
+    <ClCompile Include="D:\test1\Yolo-Fastest-master\src\voxel.c" />
+    <ClCompile Include="D:\test1\Yolo-Fastest-master\src\writing.c" />
+    <ClCompile Include="D:\test1\Yolo-Fastest-master\src\yolo.c" />
+    <ClCompile Include="D:\test1\Yolo-Fastest-master\src\yolo_layer.c" />
+    <ClCompile Include="D:\test1\Yolo-Fastest-master\src\http_stream.cpp" />
+    <ClCompile Include="D:\test1\Yolo-Fastest-master\src\image_opencv.cpp" />
+    <ClInclude Include="D:\test1\Yolo-Fastest-master\src\activation_layer.h" />
+    <ClInclude Include="D:\test1\Yolo-Fastest-master\src\activations.h" />
+    <ClInclude Include="D:\test1\Yolo-Fastest-master\src\avgpool_layer.h" />
+    <ClInclude Include="D:\test1\Yolo-Fastest-master\src\batchnorm_layer.h" />
+    <ClInclude Include="D:\test1\Yolo-Fastest-master\src\blas.h" />
+    <ClInclude Include="D:\test1\Yolo-Fastest-master\src\box.h" />
+    <ClInclude Include="D:\test1\Yolo-Fastest-master\src\classifier.h" />
+    <ClInclude Include="D:\test1\Yolo-Fastest-master\src\col2im.h" />
+    <ClInclude Include="D:\test1\Yolo-Fastest-master\src\connected_layer.h" />
+    <ClInclude Include="D:\test1\Yolo-Fastest-master\src\conv_lstm_layer.h" />
+    <ClInclude Include="D:\test1\Yolo-Fastest-master\src\convolutional_layer.h" />
+    <ClInclude Include="D:\test1\Yolo-Fastest-master\src\cost_layer.h" />
+    <ClInclude Include="D:\test1\Yolo-Fastest-master\src\crnn_layer.h" />
+    <ClInclude Include="D:\test1\Yolo-Fastest-master\src\crop_layer.h" />
+    <ClInclude Include="D:\test1\Yolo-Fastest-master\src\dark_cuda.h" />
+    <ClInclude Include="D:\test1\Yolo-Fastest-master\src\darkunistd.h" />
+    <ClInclude Include="D:\test1\Yolo-Fastest-master\src\data.h" />
+    <ClInclude Include="D:\test1\Yolo-Fastest-master\src\deconvolutional_layer.h" />
+    <ClInclude Include="D:\test1\Yolo-Fastest-master\src\demo.h" />
+    <ClInclude Include="D:\test1\Yolo-Fastest-master\src\detection_layer.h" />
+    <ClInclude Include="D:\test1\Yolo-Fastest-master\src\dropout_layer.h" />
+    <ClInclude Include="D:\test1\Yolo-Fastest-master\src\gaussian_yolo_layer.h" />
+    <ClInclude Include="D:\test1\Yolo-Fastest-master\src\gemm.h" />
+    <ClInclude Include="D:\test1\Yolo-Fastest-master\src\getopt.h" />
+    <ClInclude Include="D:\test1\Yolo-Fastest-master\src\gettimeofday.h" />
+    <ClInclude Include="D:\test1\Yolo-Fastest-master\src\gru_layer.h" />
+    <ClInclude Include="D:\test1\Yolo-Fastest-master\src\http_stream.h" />
+    <ClInclude Include="D:\test1\Yolo-Fastest-master\src\httplib.h" />
+    <ClInclude Include="D:\test1\Yolo-Fastest-master\src\im2col.h" />
+    <ClInclude Include="D:\test1\Yolo-Fastest-master\src\image.h" />
+    <ClInclude Include="D:\test1\Yolo-Fastest-master\src\image_opencv.h" />
+    <ClInclude Include="D:\test1\Yolo-Fastest-master\src\layer.h" />
+    <ClInclude Include="D:\test1\Yolo-Fastest-master\src\list.h" />
+    <ClInclude Include="D:\test1\Yolo-Fastest-master\src\local_layer.h" />
+    <ClInclude Include="D:\test1\Yolo-Fastest-master\src\lstm_layer.h" />
+    <ClInclude Include="D:\test1\Yolo-Fastest-master\src\matrix.h" />
+    <ClInclude Include="D:\test1\Yolo-Fastest-master\src\maxpool_layer.h" />
+    <ClInclude Include="D:\test1\Yolo-Fastest-master\src\network.h" />
+    <ClInclude Include="D:\test1\Yolo-Fastest-master\src\normalization_layer.h" />
+    <ClInclude Include="D:\test1\Yolo-Fastest-master\src\option_list.h" />
+    <ClInclude Include="D:\test1\Yolo-Fastest-master\src\parser.h" />
+    <ClInclude Include="D:\test1\Yolo-Fastest-master\src\region_layer.h" />
+    <ClInclude Include="D:\test1\Yolo-Fastest-master\src\reorg_layer.h" />
+    <ClInclude Include="D:\test1\Yolo-Fastest-master\src\reorg_old_layer.h" />
+    <ClInclude Include="D:\test1\Yolo-Fastest-master\src\rnn_layer.h" />
+    <ClInclude Include="D:\test1\Yolo-Fastest-master\src\route_layer.h" />
+    <ClInclude Include="D:\test1\Yolo-Fastest-master\src\sam_layer.h" />
+    <ClInclude Include="D:\test1\Yolo-Fastest-master\src\scale_channels_layer.h" />
+    <ClInclude Include="D:\test1\Yolo-Fastest-master\src\shortcut_layer.h" />
+    <ClInclude Include="D:\test1\Yolo-Fastest-master\src\softmax_layer.h" />
+    <ClInclude Include="D:\test1\Yolo-Fastest-master\src\tree.h" />
+    <ClInclude Include="D:\test1\Yolo-Fastest-master\src\upsample_layer.h" />
+    <ClInclude Include="D:\test1\Yolo-Fastest-master\src\utils.h" />
+    <ClInclude Include="D:\test1\Yolo-Fastest-master\src\version.h" />
+    <ClInclude Include="D:\test1\Yolo-Fastest-master\src\yolo_layer.h" />
+    <ClInclude Include="D:\test1\Yolo-Fastest-master\include\darknet.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:\test1\Yolo-Fastest-master\ZERO_CHECK.vcxproj">
+      <Project>{BBD22BB9-5197-3789-9D8C-E58CDD0AC0EB}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
