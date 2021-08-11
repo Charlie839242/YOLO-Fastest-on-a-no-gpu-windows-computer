@@ -23,19 +23,27 @@ CUDNN=0
 CUDNN_HALF=0
 OPENCV=1
 ```  
-接着打开Cmake，按照下图配置：
-![image](https://github.com/Charlie839242/YOLO-Fastest-on-a-no-gpu-windows-computer/blob/main/pictures/0.png)
-点击配置configure：
-![image](https://github.com/Charlie839242/YOLO-Fastest-on-a-no-gpu-windows-computer/tree/main/pictures/1.png)    
+接着打开Cmake，按照下图配置：  
+
+![image](https://github.com/Charlie839242/YOLO-Fastest-on-a-no-gpu-windows-computer/blob/main/pictures/0.png)  
+
+点击配置configure：  
+
+![image](https://github.com/Charlie839242/YOLO-Fastest-on-a-no-gpu-windows-computer/blob/main/pictures/1.png)   
+
 注意一定选择vs14 2015，否则会出现AMD64相关报错。  
 然后点击generate即可
   
   
 ### 2.3.vs2015
-用vs2015打开ALL_BUILD.vcxproj
-![image](https://github.com/Charlie839242/YOLO-Fastest-on-a-no-gpu-windows-computer/tree/main/pictures/2.png)  
+用vs2015打开ALL_BUILD.vcxproj  
+
+![image](https://github.com/Charlie839242/YOLO-Fastest-on-a-no-gpu-windows-computer/blob/main/pictures/2.png)    
+
 配置成release输出，点击生成解决方案：  
-![image](https://github.com/Charlie839242/YOLO-Fastest-on-a-no-gpu-windows-computer/tree/main/pictures/3.png)  
+
+![image](https://github.com/Charlie839242/YOLO-Fastest-on-a-no-gpu-windows-computer/blob/main/pictures/3.png)    
+
 
 ### 2.4.
 此时已在目录下生成Release文件夹，将其中的darknet.dll和darknet.exe复制到/build/darknet/x64下，将ModelZoo\yolo-fastest-1.1_coco中的yolo-fastest-1.1.cfg, yolo-fastest-1.1-xl.cfg, yolo-fastest-1.1.weights, yolo-fastest-1.1-xl.weights复制到/build/darknet/x64/cfg下,并修改yolo-fastest-1.1.cfg：  
@@ -62,9 +70,12 @@ classes=1
   
 ## 3.构建数据集
 /build/darknet/x64/data目录下就是数据集相关的文件。  
-要用到的照片放在image文件夹中，然后标注后的xml文件放在Annotations文件夹中，然后运行makedata.py和/build/darknet/x64目录下的voc_label.py，最后将labels文件夹里的txt文件全部复制进入images，即可生成yolo格式的数据集。
-![image](https://github.com/Charlie839242/YOLO-Fastest-on-a-no-gpu-windows-computer/tree/main/pictures/4.png)   
-![image](https://github.com/Charlie839242/YOLO-Fastest-on-a-no-gpu-windows-computer/tree/main/pictures/5.png)   
+要用到的照片放在image文件夹中，然后标注后的xml文件放在Annotations文件夹中，然后运行makedata.py和/build/darknet/x64目录下的voc_label.py，最后将labels文件夹里的txt文件全部复制进入images，即可生成yolo格式的数据集。  
+
+![image](https://github.com/Charlie839242/YOLO-Fastest-on-a-no-gpu-windows-computer/blob/main/pictures/4.png)     
+
+![image](https://github.com/Charlie839242/YOLO-Fastest-on-a-no-gpu-windows-computer/blob/main/pictures/5.png)  
+
 接着在/build/darknet/x64/data目录下新建eye.data和eye.names：
 Eye.data:
 ```
@@ -94,8 +105,10 @@ pause
 darknet detector train data\eye.data cfg\yolo-fastest-1.1.cfg model\yolo-fastest-1.1.conv.109 backup\
 pause
 ```
-双击开始训练模型：
-![image](https://github.com/Charlie839242/YOLO-Fastest-on-a-no-gpu-windows-computer/tree/main/pictures/6.png)
+双击开始训练模型：  
+
+![image](https://github.com/Charlie839242/YOLO-Fastest-on-a-no-gpu-windows-computer/blob/main/pictures/6.png)  
+
 
 ## 5.运行模型
 在/build/darknet/x64新建一个eyerun.bat，其中写入：
@@ -104,7 +117,9 @@ darknet.exe detector test ./data/eye.data ./cfg/yolo-fastest-1.1.cfg ./backup/yo
 pause
 ```
 要检测图片存放在/build/darknet/x64/data/test中  
-![image](https://github.com/Charlie839242/YOLO-Fastest-on-a-no-gpu-windows-computer/tree/main/pictures/7.png)
+
+![image](https://github.com/Charlie839242/YOLO-Fastest-on-a-no-gpu-windows-computer/blob/main/pictures/7.png)  
+
 
 
 
