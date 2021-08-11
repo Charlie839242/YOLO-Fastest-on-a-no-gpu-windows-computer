@@ -23,7 +23,45 @@ CUDNN=0
 CUDNN_HALF=0
 OPENCV=1
 ```  
-接着打开Cmake，按照下图配置
+接着打开Cmake，按照下图配置：
+![image](https://github.com/Charlie839242/YOLO-Fastest-on-a-no-gpu-windows-computer/tree/main/pictures/0.png)
+点击配置configure：
+![image](https://github.com/Charlie839242/YOLO-Fastest-on-a-no-gpu-windows-computer/tree/main/pictures/1.png)    
+注意一定选择vs14 2015，否则会出现AMD64相关报错。  
+然后点击generate即可
+  
+  
+### 2.3.vs2015
+用vs2015打开ALL_BUILD.vcxproj
+![image](https://github.com/Charlie839242/YOLO-Fastest-on-a-no-gpu-windows-computer/tree/main/pictures/2.png)  
+配置成release输出，点击生成解决方案：  
+![image](https://github.com/Charlie839242/YOLO-Fastest-on-a-no-gpu-windows-computer/tree/main/pictures/3.png)  
+
+### 2.4.
+此时已在目录下生成Release文件夹，将其中的darknet.dll和darknet.exe复制到/build/darknet/x64下，将ModelZoo\yolo-fastest-1.1_coco中的yolo-fastest-1.1.cfg, yolo-fastest-1.1-xl.cfg, yolo-fastest-1.1.weights, yolo-fastest-1.1-xl.weights复制到/build/darknet/x64/cfg下,并修改yolo-fastest-1.1.cfg：  
+```
+First Line：  
+
+[net]
+batch=16
+subdivisions=8
+width=320
+height=320  
+
+858 Line and 926 Line：  
+
+filters=18  
+
+865 and 933 line：  
+
+classes=1  
+  
+  #可将17行的max_batches调成10来快速训练走下流程
+
+```
+  
+
+
 
 
 
