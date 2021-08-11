@@ -40,7 +40,7 @@ OPENCV=1
 ### 2.4.
 此时已在目录下生成Release文件夹，将其中的darknet.dll和darknet.exe复制到/build/darknet/x64下，将ModelZoo\yolo-fastest-1.1_coco中的yolo-fastest-1.1.cfg, yolo-fastest-1.1-xl.cfg, yolo-fastest-1.1.weights, yolo-fastest-1.1-xl.weights复制到/build/darknet/x64/cfg下,并修改yolo-fastest-1.1.cfg：  
 ```
-First Line：  
+1 line：  
 
 [net]
 batch=16
@@ -48,7 +48,7 @@ subdivisions=8
 width=320
 height=320  
 
-858 Line and 926 Line：  
+858 and 926 line：  
 
 filters=18  
 
@@ -56,10 +56,58 @@ filters=18
 
 classes=1  
   
-  #可将17行的max_batches调成10来快速训练走下流程
+#可将17行的max_batches调成10来快速训练走下流程
 
 ```
   
+## 3.构建数据集
+/build/darknet/x64/data目录下就是数据集相关的文件。  
+要用到的照片放在image文件夹中，然后标注后的xml文件放在Annotations文件夹中，然后运行makedata.py和/build/darknet/x64目录下的voc_label.py，最后将labels文件夹里的txt文件全部复制进入images，即可生成yolo格式的数据集。
+![image](https://github.com/Charlie839242/YOLO-Fastest-on-a-no-gpu-windows-computer/tree/main/pictures/4.png)   
+![image](https://github.com/Charlie839242/YOLO-Fastest-on-a-no-gpu-windows-computer/tree/main/pictures/5.png)   
+接着在/build/darknet/x64/data目录下新建eye.data和eye.names：
+Eye.data:
+```
+classes= 1
+train  = data/train.txt
+valid  = data/test.txt
+names = data/eye.names
+backup = backup/
+```
+eye.names:包含类别
+```
+eye
+```
+
+## 4.训练
+在/build/darknet/x64新建一个model文件夹用来存放模型  
+
+在/build/darknet/x64目录下新建一个eye.bat文件，作为预训练，预训练模型存放在/build/darknet/x64/model中，其中写入：
+```
+darknet partial cfg\yolo-fastest-1.1.cfg cfg\yolo-fastest-1.1.weights model\yolo-fastest-1.1.conv.109 109
+pause
+```
+然后双击该文件开始预训练模型  
+
+再新建一个eyefull.bat文件来完整训练，其模型存在其中/build/darknet/x64/backup中，向其中写入：
+```
+darknet detector train data\eye.data cfg\yolo-fastest-1.1.cfg model\yolo-fastest-1.1.conv.109 backup\
+pause
+```
+双击开始训练模型：
+![image](https://github.com/Charlie839242/YOLO-Fastest-on-a-no-gpu-windows-computer/tree/main/pictures/6.png)
+
+## 5.运行模型
+在/build/darknet/x64新建一个eyerun.bat，其中写入：
+```
+darknet.exe detector test ./data/eye.data ./cfg/yolo-fastest-1.1.cfg ./backup/yolo-fastest-1_final.weights ./data/test/0.jpg
+pause
+```
+要检测图片存放在/build/darknet/x64/data/test中  
+![image](https://github.com/Charlie839242/YOLO-Fastest-on-a-no-gpu-windows-computer/tree/main/pictures/7.png)
+
+
+
 
 
 
