@@ -22,7 +22,9 @@ GPU=0
 CUDNN=0
 CUDNN_HALF=0
 OPENCV=1
-```
+```  
+接着打开Cmake，按照下图配置
+
 
 
 
