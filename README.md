@@ -24,7 +24,7 @@ CUDNN_HALF=0
 OPENCV=1
 ```  
 接着打开Cmake，按照下图配置：
-![image](https://github.com/Charlie839242/YOLO-Fastest-on-a-no-gpu-windows-computer/tree/main/pictures/0.png)
+![image](https://github.com/Charlie839242/YOLO-Fastest-on-a-no-gpu-windows-computer/blob/main/pictures/0.png)
 点击配置configure：
 ![image](https://github.com/Charlie839242/YOLO-Fastest-on-a-no-gpu-windows-computer/tree/main/pictures/1.png)    
 注意一定选择vs14 2015，否则会出现AMD64相关报错。  
