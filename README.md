@@ -11,10 +11,14 @@ https://blog.csdn.net/weixin_41868104/article/details/115795348?ops_request_misc
 ## 2.编译源码
   这一步是为了得到darknet.dll和darknet.exe
 ### 2.1.安装相关软件
-安装Cmake：https://cmake.org/download/
-安装vs2015：https://my.visualstudio.com/Downloads?q=visual%20studio%202015&wt.mc_id=o~msft~vscom~older-downloads
-安装opencv：https://opencv.org/releases/
-注意：cmake的安装路径不能有中文，且opencv要添加到环境变量里
+安装Cmake：https://cmake.org/download/  
+
+安装vs2015：https://my.visualstudio.com/Downloads?q=visual%20studio%202015&wt.mc_id=o~msft~vscom~older-downloads  
+
+安装opencv：https://opencv.org/releases/  
+
+注意：cmake的安装路径不能有中文，且opencv要添加到环境变量里  
+
 ### 2.2.Cmake编译
 修改源码目录下的Makefile中的前四行参数：
 ```
