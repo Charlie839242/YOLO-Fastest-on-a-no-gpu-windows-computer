@@ -35,6 +35,8 @@ OPENCV=1
 
 ![image](https://github.com/Charlie839242/YOLO-Fastest-on-a-no-gpu-windows-computer/blob/main/pictures/1.png)   
 
+提示找不到opencv时注意路径就在opencv下的build文件夹。  
+
 注意一定选择vs14 2015，否则会出现AMD64相关报错。  
 然后点击generate即可
   
